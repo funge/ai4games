@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002F39FA09D0881F00EBEB88 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F39F909D0881F00EBEB88 /* SDL.framework */; };
+		002F3A0009D0884600EBEB88 /* SDL.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = 002F39F909D0881F00EBEB88 /* SDL.framework */; };
+		002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C0009D093BD00EBEB88 /* OpenGL.framework */; };
+		002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C6009D0951E00EBEB88 /* GLUT.framework */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F03256230BB2516C0064F7C2 /* MathUtil.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F03256220BB2516C0064F7C2 /* MathUtil.h */; };
+		F0506A7A0BAE3E66002A973F /* tagGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506A790BAE3E66002A973F /* tagGame.cpp */; };
+		F0506A880BAE3F4A002A973F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506A860BAE3F4A002A973F /* Action.cpp */; };
+		F0506A890BAE3F4A002A973F /* Action.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506A870BAE3F4A002A973F /* Action.h */; };
+		F0506A930BAE4270002A973F /* SDLMain.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506A910BAE4270002A973F /* SDLMain.h */; };
+		F0506A940BAE4270002A973F /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F0506A920BAE4270002A973F /* SDLMain.m */; };
+		F0506AA30BAE42A5002A973F /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506A9B0BAE42A5002A973F /* Character.cpp */; };
+		F0506AA40BAE42A5002A973F /* Character.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506A9C0BAE42A5002A973F /* Character.h */; };
+		F0506AA50BAE42A5002A973F /* CharacterRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506A9D0BAE42A5002A973F /* CharacterRenderer.cpp */; };
+		F0506AA60BAE42A5002A973F /* CharacterRenderer.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506A9E0BAE42A5002A973F /* CharacterRenderer.h */; };
+		F0506AA70BAE42A5002A973F /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506A9F0BAE42A5002A973F /* Circle.cpp */; };
+		F0506AA80BAE42A5002A973F /* Circle.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AA00BAE42A5002A973F /* Circle.h */; };
+		F0506AA90BAE42A5002A973F /* CircleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AA10BAE42A5002A973F /* CircleRenderer.cpp */; };
+		F0506AAA0BAE42A5002A973F /* CircleRenderer.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AA20BAE42A5002A973F /* CircleRenderer.h */; };
+		F0506ABF0BAE42C6002A973F /* Controller.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AAB0BAE42C6002A973F /* Controller.h */; };
+		F0506AC00BAE42C6002A973F /* ControllerAvoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AAC0BAE42C6002A973F /* ControllerAvoid.cpp */; };
+		F0506AC10BAE42C6002A973F /* ControllerAvoid.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AAD0BAE42C6002A973F /* ControllerAvoid.h */; };
+		F0506AC20BAE42C6002A973F /* ControllerConditional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AAE0BAE42C6002A973F /* ControllerConditional.cpp */; };
+		F0506AC30BAE42C6002A973F /* ControllerConditional.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AAF0BAE42C6002A973F /* ControllerConditional.h */; };
+		F0506AC40BAE42C6002A973F /* ControllerEvade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AB00BAE42C6002A973F /* ControllerEvade.cpp */; };
+		F0506AC50BAE42C6002A973F /* ControllerEvade.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AB10BAE42C6002A973F /* ControllerEvade.h */; };
+		F0506AC60BAE42C6002A973F /* ControllerFlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AB20BAE42C6002A973F /* ControllerFlock.cpp */; };
+		F0506AC70BAE42C6002A973F /* ControllerFlock.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AB30BAE42C6002A973F /* ControllerFlock.h */; };
+		F0506AC80BAE42C6002A973F /* ControllerPC.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AB40BAE42C6002A973F /* ControllerPC.h */; };
+		F0506AC90BAE42C6002A973F /* ControllerPeriodic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AB50BAE42C6002A973F /* ControllerPeriodic.cpp */; };
+		F0506ACA0BAE42C6002A973F /* ControllerPeriodic.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AB60BAE42C6002A973F /* ControllerPeriodic.h */; };
+		F0506ACB0BAE42C6002A973F /* ControllerPeriodicRamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AB70BAE42C6002A973F /* ControllerPeriodicRamp.cpp */; };
+		F0506ACC0BAE42C6002A973F /* ControllerPeriodicRamp.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AB80BAE42C6002A973F /* ControllerPeriodicRamp.h */; };
+		F0506ACD0BAE42C6002A973F /* ControllerPursue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AB90BAE42C6002A973F /* ControllerPursue.cpp */; };
+		F0506ACE0BAE42C6002A973F /* ControllerPursue.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506ABA0BAE42C6002A973F /* ControllerPursue.h */; };
+		F0506ACF0BAE42C6002A973F /* ControllerRandomize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506ABB0BAE42C6002A973F /* ControllerRandomize.cpp */; };
+		F0506AD00BAE42C6002A973F /* ControllerRandomize.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506ABC0BAE42C6002A973F /* ControllerRandomize.h */; };
+		F0506AD10BAE42C6002A973F /* ControllerWander.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506ABD0BAE42C6002A973F /* ControllerWander.cpp */; };
+		F0506AD20BAE42C6002A973F /* ControllerWander.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506ABE0BAE42C6002A973F /* ControllerWander.h */; };
+		F0506AD60BAE42DE002A973F /* GameState.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AD30BAE42DE002A973F /* GameState.h */; };
+		F0506AD70BAE42DE002A973F /* Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AD40BAE42DE002A973F /* Gui.cpp */; };
+		F0506AD80BAE42DE002A973F /* Gui.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AD50BAE42DE002A973F /* Gui.h */; };
+		F0506ADD0BAE42F8002A973F /* JoystickSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AD90BAE42F8002A973F /* JoystickSDL.cpp */; };
+		F0506ADE0BAE42F8002A973F /* JoystickSDL.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506ADA0BAE42F8002A973F /* JoystickSDL.h */; };
+		F0506ADF0BAE42F8002A973F /* KeyboardSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506ADB0BAE42F8002A973F /* KeyboardSDL.cpp */; };
+		F0506AE00BAE42F8002A973F /* KeyboardSDL.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506ADC0BAE42F8002A973F /* KeyboardSDL.h */; };
+		F0506AEA0BAE4325002A973F /* Matrix.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AE50BAE4325002A973F /* Matrix.h */; };
+		F0506AEB0BAE4325002A973F /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AE60BAE4325002A973F /* Obstacle.cpp */; };
+		F0506AEC0BAE4325002A973F /* Obstacle.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AE70BAE4325002A973F /* Obstacle.h */; };
+		F0506AED0BAE4325002A973F /* Perception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AE80BAE4325002A973F /* Perception.cpp */; };
+		F0506AEE0BAE4325002A973F /* Perception.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AE90BAE4325002A973F /* Perception.h */; };
+		F0506AF20BAE433D002A973F /* Renderer.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AEF0BAE433D002A973F /* Renderer.h */; };
+		F0506AF30BAE433D002A973F /* RendererColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AF00BAE433D002A973F /* RendererColor.cpp */; };
+		F0506AF40BAE433D002A973F /* RendererColor.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AF10BAE433D002A973F /* RendererColor.h */; };
+		F0506AFC0BAE4356002A973F /* Shape.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AF50BAE4356002A973F /* Shape.h */; };
+		F0506AFD0BAE4356002A973F /* Side.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AF60BAE4356002A973F /* Side.cpp */; };
+		F0506AFE0BAE4356002A973F /* Side.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AF70BAE4356002A973F /* Side.h */; };
+		F0506AFF0BAE4356002A973F /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506AF80BAE4356002A973F /* Simulator.cpp */; };
+		F0506B000BAE4356002A973F /* Simulator.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506AF90BAE4356002A973F /* Simulator.h */; };
+		F0506B040BAE4370002A973F /* Timer.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506B030BAE4370002A973F /* Timer.h */; };
+		F0506B090BAE4389002A973F /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506B050BAE4389002A973F /* Util.cpp */; };
+		F0506B0A0BAE4389002A973F /* Util.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506B060BAE4389002A973F /* Util.h */; };
+		F0506B0B0BAE4389002A973F /* Util2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0506B070BAE4389002A973F /* Util2D.cpp */; };
+		F0506B0C0BAE4389002A973F /* Util2D.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0506B080BAE4389002A973F /* Util2D.h */; };
+		F0D606A90BAE445100DFBE3E /* Vec.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = F0D606A80BAE445100DFBE3E /* Vec.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				002F3A0009D0884600EBEB88 /* SDL.framework in Copy Frameworks into .app bundle */,
+				F0506A890BAE3F4A002A973F /* Action.h in Copy Frameworks into .app bundle */,
+				F0506A930BAE4270002A973F /* SDLMain.h in Copy Frameworks into .app bundle */,
+				F0506AA40BAE42A5002A973F /* Character.h in Copy Frameworks into .app bundle */,
+				F0506AA60BAE42A5002A973F /* CharacterRenderer.h in Copy Frameworks into .app bundle */,
+				F0506AA80BAE42A5002A973F /* Circle.h in Copy Frameworks into .app bundle */,
+				F0506AAA0BAE42A5002A973F /* CircleRenderer.h in Copy Frameworks into .app bundle */,
+				F0506ABF0BAE42C6002A973F /* Controller.h in Copy Frameworks into .app bundle */,
+				F0506AC10BAE42C6002A973F /* ControllerAvoid.h in Copy Frameworks into .app bundle */,
+				F0506AC30BAE42C6002A973F /* ControllerConditional.h in Copy Frameworks into .app bundle */,
+				F0506AC50BAE42C6002A973F /* ControllerEvade.h in Copy Frameworks into .app bundle */,
+				F0506AC70BAE42C6002A973F /* ControllerFlock.h in Copy Frameworks into .app bundle */,
+				F0506AC80BAE42C6002A973F /* ControllerPC.h in Copy Frameworks into .app bundle */,
+				F0506ACA0BAE42C6002A973F /* ControllerPeriodic.h in Copy Frameworks into .app bundle */,
+				F0506ACC0BAE42C6002A973F /* ControllerPeriodicRamp.h in Copy Frameworks into .app bundle */,
+				F0506ACE0BAE42C6002A973F /* ControllerPursue.h in Copy Frameworks into .app bundle */,
+				F0506AD00BAE42C6002A973F /* ControllerRandomize.h in Copy Frameworks into .app bundle */,
+				F0506AD20BAE42C6002A973F /* ControllerWander.h in Copy Frameworks into .app bundle */,
+				F0506AD60BAE42DE002A973F /* GameState.h in Copy Frameworks into .app bundle */,
+				F0506AD80BAE42DE002A973F /* Gui.h in Copy Frameworks into .app bundle */,
+				F0506ADE0BAE42F8002A973F /* JoystickSDL.h in Copy Frameworks into .app bundle */,
+				F0506AE00BAE42F8002A973F /* KeyboardSDL.h in Copy Frameworks into .app bundle */,
+				F0506AEA0BAE4325002A973F /* Matrix.h in Copy Frameworks into .app bundle */,
+				F0506AEC0BAE4325002A973F /* Obstacle.h in Copy Frameworks into .app bundle */,
+				F0506AEE0BAE4325002A973F /* Perception.h in Copy Frameworks into .app bundle */,
+				F0506AF20BAE433D002A973F /* Renderer.h in Copy Frameworks into .app bundle */,
+				F0506AF40BAE433D002A973F /* RendererColor.h in Copy Frameworks into .app bundle */,
+				F0506AFC0BAE4356002A973F /* Shape.h in Copy Frameworks into .app bundle */,
+				F0506AFE0BAE4356002A973F /* Side.h in Copy Frameworks into .app bundle */,
+				F0506B000BAE4356002A973F /* Simulator.h in Copy Frameworks into .app bundle */,
+				F0506B040BAE4370002A973F /* Timer.h in Copy Frameworks into .app bundle */,
+				F0506B0A0BAE4389002A973F /* Util.h in Copy Frameworks into .app bundle */,
+				F0506B0C0BAE4389002A973F /* Util2D.h in Copy Frameworks into .app bundle */,
+				F0D606A90BAE445100DFBE3E /* Vec.h in Copy Frameworks into .app bundle */,
+				F03256230BB2516C0064F7C2 /* MathUtil.h in Copy Frameworks into .app bundle */,
+			);
+			name = "Copy Frameworks into .app bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		002F39F909D0881F00EBEB88 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		002F3C0009D093BD00EBEB88 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		002F3C6009D0951E00EBEB88 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = SOURCE_ROOT; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* tagGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03256220BB2516C0064F7C2 /* MathUtil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MathUtil.h; sourceTree = "<group>"; };
+		F0506A790BAE3E66002A973F /* tagGame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = tagGame.cpp; sourceTree = "<group>"; };
+		F0506A860BAE3F4A002A973F /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
+		F0506A870BAE3F4A002A973F /* Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		F0506A910BAE4270002A973F /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		F0506A920BAE4270002A973F /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+		F0506A9B0BAE42A5002A973F /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		F0506A9C0BAE42A5002A973F /* Character.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F0506A9D0BAE42A5002A973F /* CharacterRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterRenderer.cpp; sourceTree = "<group>"; };
+		F0506A9E0BAE42A5002A973F /* CharacterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CharacterRenderer.h; sourceTree = "<group>"; };
+		F0506A9F0BAE42A5002A973F /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
+		F0506AA00BAE42A5002A973F /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		F0506AA10BAE42A5002A973F /* CircleRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CircleRenderer.cpp; sourceTree = "<group>"; };
+		F0506AA20BAE42A5002A973F /* CircleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CircleRenderer.h; sourceTree = "<group>"; };
+		F0506AAB0BAE42C6002A973F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		F0506AAC0BAE42C6002A973F /* ControllerAvoid.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerAvoid.cpp; sourceTree = "<group>"; };
+		F0506AAD0BAE42C6002A973F /* ControllerAvoid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerAvoid.h; sourceTree = "<group>"; };
+		F0506AAE0BAE42C6002A973F /* ControllerConditional.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerConditional.cpp; sourceTree = "<group>"; };
+		F0506AAF0BAE42C6002A973F /* ControllerConditional.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerConditional.h; sourceTree = "<group>"; };
+		F0506AB00BAE42C6002A973F /* ControllerEvade.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerEvade.cpp; sourceTree = "<group>"; };
+		F0506AB10BAE42C6002A973F /* ControllerEvade.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerEvade.h; sourceTree = "<group>"; };
+		F0506AB20BAE42C6002A973F /* ControllerFlock.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerFlock.cpp; sourceTree = "<group>"; };
+		F0506AB30BAE42C6002A973F /* ControllerFlock.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerFlock.h; sourceTree = "<group>"; };
+		F0506AB40BAE42C6002A973F /* ControllerPC.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerPC.h; sourceTree = "<group>"; };
+		F0506AB50BAE42C6002A973F /* ControllerPeriodic.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerPeriodic.cpp; sourceTree = "<group>"; };
+		F0506AB60BAE42C6002A973F /* ControllerPeriodic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerPeriodic.h; sourceTree = "<group>"; };
+		F0506AB70BAE42C6002A973F /* ControllerPeriodicRamp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerPeriodicRamp.cpp; sourceTree = "<group>"; };
+		F0506AB80BAE42C6002A973F /* ControllerPeriodicRamp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerPeriodicRamp.h; sourceTree = "<group>"; };
+		F0506AB90BAE42C6002A973F /* ControllerPursue.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerPursue.cpp; sourceTree = "<group>"; };
+		F0506ABA0BAE42C6002A973F /* ControllerPursue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerPursue.h; sourceTree = "<group>"; };
+		F0506ABB0BAE42C6002A973F /* ControllerRandomize.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerRandomize.cpp; sourceTree = "<group>"; };
+		F0506ABC0BAE42C6002A973F /* ControllerRandomize.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerRandomize.h; sourceTree = "<group>"; };
+		F0506ABD0BAE42C6002A973F /* ControllerWander.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerWander.cpp; sourceTree = "<group>"; };
+		F0506ABE0BAE42C6002A973F /* ControllerWander.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerWander.h; sourceTree = "<group>"; };
+		F0506AD30BAE42DE002A973F /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		F0506AD40BAE42DE002A973F /* Gui.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Gui.cpp; sourceTree = "<group>"; };
+		F0506AD50BAE42DE002A973F /* Gui.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Gui.h; sourceTree = "<group>"; };
+		F0506AD90BAE42F8002A973F /* JoystickSDL.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = JoystickSDL.cpp; sourceTree = "<group>"; };
+		F0506ADA0BAE42F8002A973F /* JoystickSDL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = JoystickSDL.h; sourceTree = "<group>"; };
+		F0506ADB0BAE42F8002A973F /* KeyboardSDL.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardSDL.cpp; sourceTree = "<group>"; };
+		F0506ADC0BAE42F8002A973F /* KeyboardSDL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeyboardSDL.h; sourceTree = "<group>"; };
+		F0506AE50BAE4325002A973F /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		F0506AE60BAE4325002A973F /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
+		F0506AE70BAE4325002A973F /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		F0506AE80BAE4325002A973F /* Perception.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Perception.cpp; sourceTree = "<group>"; };
+		F0506AE90BAE4325002A973F /* Perception.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Perception.h; sourceTree = "<group>"; };
+		F0506AEF0BAE433D002A973F /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		F0506AF00BAE433D002A973F /* RendererColor.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RendererColor.cpp; sourceTree = "<group>"; };
+		F0506AF10BAE433D002A973F /* RendererColor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RendererColor.h; sourceTree = "<group>"; };
+		F0506AF50BAE4356002A973F /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		F0506AF60BAE4356002A973F /* Side.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Side.cpp; sourceTree = "<group>"; };
+		F0506AF70BAE4356002A973F /* Side.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Side.h; sourceTree = "<group>"; };
+		F0506AF80BAE4356002A973F /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
+		F0506AF90BAE4356002A973F /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		F0506B030BAE4370002A973F /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		F0506B050BAE4389002A973F /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cpp; sourceTree = "<group>"; };
+		F0506B060BAE4389002A973F /* Util.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		F0506B070BAE4389002A973F /* Util2D.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Util2D.cpp; sourceTree = "<group>"; };
+		F0506B080BAE4389002A973F /* Util2D.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Util2D.h; sourceTree = "<group>"; };
+		F0D606A80BAE445100DFBE3E /* Vec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Vec.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002F39FA09D0881F00EBEB88 /* SDL.framework in Frameworks */,
+				002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0506A910BAE4270002A973F /* SDLMain.h */,
+				F0506A920BAE4270002A973F /* SDLMain.m */,
+				F0D606A80BAE445100DFBE3E /* Vec.h */,
+				F0506A9B0BAE42A5002A973F /* Character.cpp */,
+				F0506A9C0BAE42A5002A973F /* Character.h */,
+				F0506A9D0BAE42A5002A973F /* CharacterRenderer.cpp */,
+				F0506AAB0BAE42C6002A973F /* Controller.h */,
+				F0506AD30BAE42DE002A973F /* GameState.h */,
+				F0506AD40BAE42DE002A973F /* Gui.cpp */,
+				F0506AE50BAE4325002A973F /* Matrix.h */,
+				F0506B030BAE4370002A973F /* Timer.h */,
+				F0506AF50BAE4356002A973F /* Shape.h */,
+				F0506AF60BAE4356002A973F /* Side.cpp */,
+				F03256220BB2516C0064F7C2 /* MathUtil.h */,
+				F0506B050BAE4389002A973F /* Util.cpp */,
+				F0506B060BAE4389002A973F /* Util.h */,
+				F0506B070BAE4389002A973F /* Util2D.cpp */,
+				F0506B080BAE4389002A973F /* Util2D.h */,
+				F0506AF70BAE4356002A973F /* Side.h */,
+				F0506AF80BAE4356002A973F /* Simulator.cpp */,
+				F0506AF90BAE4356002A973F /* Simulator.h */,
+				F0506AE60BAE4325002A973F /* Obstacle.cpp */,
+				F0506AE70BAE4325002A973F /* Obstacle.h */,
+				F0506AEF0BAE433D002A973F /* Renderer.h */,
+				F0506AF00BAE433D002A973F /* RendererColor.cpp */,
+				F0506AF10BAE433D002A973F /* RendererColor.h */,
+				F0506AE80BAE4325002A973F /* Perception.cpp */,
+				F0506AE90BAE4325002A973F /* Perception.h */,
+				F0506AD90BAE42F8002A973F /* JoystickSDL.cpp */,
+				F0506ADA0BAE42F8002A973F /* JoystickSDL.h */,
+				F0506ADB0BAE42F8002A973F /* KeyboardSDL.cpp */,
+				F0506ADC0BAE42F8002A973F /* KeyboardSDL.h */,
+				F0506AD50BAE42DE002A973F /* Gui.h */,
+				F0506AAC0BAE42C6002A973F /* ControllerAvoid.cpp */,
+				F0506AAD0BAE42C6002A973F /* ControllerAvoid.h */,
+				F0506AAE0BAE42C6002A973F /* ControllerConditional.cpp */,
+				F0506AAF0BAE42C6002A973F /* ControllerConditional.h */,
+				F0506AB00BAE42C6002A973F /* ControllerEvade.cpp */,
+				F0506AB10BAE42C6002A973F /* ControllerEvade.h */,
+				F0506AB20BAE42C6002A973F /* ControllerFlock.cpp */,
+				F0506AB30BAE42C6002A973F /* ControllerFlock.h */,
+				F0506AB40BAE42C6002A973F /* ControllerPC.h */,
+				F0506AB50BAE42C6002A973F /* ControllerPeriodic.cpp */,
+				F0506AB60BAE42C6002A973F /* ControllerPeriodic.h */,
+				F0506AB70BAE42C6002A973F /* ControllerPeriodicRamp.cpp */,
+				F0506AB80BAE42C6002A973F /* ControllerPeriodicRamp.h */,
+				F0506AB90BAE42C6002A973F /* ControllerPursue.cpp */,
+				F0506ABA0BAE42C6002A973F /* ControllerPursue.h */,
+				F0506ABB0BAE42C6002A973F /* ControllerRandomize.cpp */,
+				F0506ABC0BAE42C6002A973F /* ControllerRandomize.h */,
+				F0506ABD0BAE42C6002A973F /* ControllerWander.cpp */,
+				F0506ABE0BAE42C6002A973F /* ControllerWander.h */,
+				F0506A9E0BAE42A5002A973F /* CharacterRenderer.h */,
+				F0506A9F0BAE42A5002A973F /* Circle.cpp */,
+				F0506AA00BAE42A5002A973F /* Circle.h */,
+				F0506AA10BAE42A5002A973F /* CircleRenderer.cpp */,
+				F0506AA20BAE42A5002A973F /* CircleRenderer.h */,
+				F0506A860BAE3F4A002A973F /* Action.cpp */,
+				F0506A870BAE3F4A002A973F /* Action.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				002F39F909D0881F00EBEB88 /* SDL.framework */,
+				002F3C6009D0951E00EBEB88 /* GLUT.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				002F3C0009D093BD00EBEB88 /* OpenGL.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* tagGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* tagGame */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = tagGame;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F0506A790BAE3E66002A973F /* tagGame.cpp */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* tagGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tagGame" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tagGame;
+			productInstallPath = "$(HOME)/Applications";
+			productName = tagGame;
+			productReference = 8D1107320486CEB800E47090 /* tagGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tagGame" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* tagGame */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* tagGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0506A7A0BAE3E66002A973F /* tagGame.cpp in Sources */,
+				F0506A880BAE3F4A002A973F /* Action.cpp in Sources */,
+				F0506A940BAE4270002A973F /* SDLMain.m in Sources */,
+				F0506AA30BAE42A5002A973F /* Character.cpp in Sources */,
+				F0506AA50BAE42A5002A973F /* CharacterRenderer.cpp in Sources */,
+				F0506AA70BAE42A5002A973F /* Circle.cpp in Sources */,
+				F0506AA90BAE42A5002A973F /* CircleRenderer.cpp in Sources */,
+				F0506AC00BAE42C6002A973F /* ControllerAvoid.cpp in Sources */,
+				F0506AC20BAE42C6002A973F /* ControllerConditional.cpp in Sources */,
+				F0506AC40BAE42C6002A973F /* ControllerEvade.cpp in Sources */,
+				F0506AC60BAE42C6002A973F /* ControllerFlock.cpp in Sources */,
+				F0506AC90BAE42C6002A973F /* ControllerPeriodic.cpp in Sources */,
+				F0506ACB0BAE42C6002A973F /* ControllerPeriodicRamp.cpp in Sources */,
+				F0506ACD0BAE42C6002A973F /* ControllerPursue.cpp in Sources */,
+				F0506ACF0BAE42C6002A973F /* ControllerRandomize.cpp in Sources */,
+				F0506AD10BAE42C6002A973F /* ControllerWander.cpp in Sources */,
+				F0506AD70BAE42DE002A973F /* Gui.cpp in Sources */,
+				F0506ADD0BAE42F8002A973F /* JoystickSDL.cpp in Sources */,
+				F0506ADF0BAE42F8002A973F /* KeyboardSDL.cpp in Sources */,
+				F0506AEB0BAE4325002A973F /* Obstacle.cpp in Sources */,
+				F0506AED0BAE4325002A973F /* Perception.cpp in Sources */,
+				F0506AF30BAE433D002A973F /* RendererColor.cpp in Sources */,
+				F0506AFD0BAE4356002A973F /* Side.cpp in Sources */,
+				F0506AFF0BAE4356002A973F /* Simulator.cpp in Sources */,
+				F0506B090BAE4389002A973F /* Util.cpp in Sources */,
+				F0506B0B0BAE4389002A973F /* Util2D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = tagGame;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = tagGame;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					/Library/Frameworks/SDL.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					/Library/Frameworks/SDL.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tagGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tagGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

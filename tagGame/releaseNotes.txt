@@ -1,0 +1,37 @@
+The release numbering format is the standard x.y.z format.  Where
+increments in z indicate bug fixes and other minor non-functional
+changes, increments in y indicate minor changes in functionality and
+increments in x indicate major changes in functionality.
+
+Release 1.2.0
+-------------
+
+Fixed a serious bug in the collision code.
+
+Switched over to impulse based collision and removed the penalty based code.
+
+Switched to a more conventional code style.
+
+Lots of re-factoring and cleanup.
+
+Release 1.1.0
+-------------
+
+Added keyboard control for the player character and made it the default.
+
+Fixed some code style inconsistencies.
+
+Release 1.0.0
+-------------
+
+Initial release.
+
+The code compiles and runs on MacOSX, Linux and Windows.
+
+Character behavior is too simple and unsophisticated.
+
+Collisions with sides is turned off.
+
+Many interfaces are either uncommented or only partially commented.
+
+There are many minor code-style inconsistencies.

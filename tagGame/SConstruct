@@ -1,0 +1,76 @@
+import glob
+import sys
+
+# Useful for printing out the build environment
+def printEnv(env) :
+   dict = env.Dictionary()
+   keys = dict.keys()
+   keys.sort()
+   for key in keys:
+      print "construction variable = '%s', value = '%s'" % (key, dict[key])
+
+# gather a list of source files
+SOURCES = glob.glob('*.cpp')
+
+# printEnv(Environment())
+# create build environment
+env = Environment()
+
+# Note: If you want to build on Windows and you don't have a copy of
+# Visual Studio (or even if you do) you can download the
+# free Visual C++ Toolkit and use "scons MSTOOLKIT=yes"
+if sys.platform == 'win32':
+   # MD specifies multi-threading, as required by SDL, use /MDd for debug version
+   # GR enables runtime type information (RTTI) that is needed for dynamic_cast to work
+   # EHsc suppresses warnings about exceptions generated from standard header files
+   env.Append(CCFLAGS = ['/MD', '/GR', '/EHsc'])
+
+   # This CPPPATH and LIBPATH assume SDL is installed in the root of C: drive.
+   # If you installed it elsewhere, you'll obviously need to change the values.
+   env.Append(CPPPATH = ['C:/SDL/include/SDL'])
+   env.Append(LIBPATH = ['C:/SDL/lib'])
+   env.Append(LINKFLAGS = ['/NOLOGO', '/SUBSYSTEM:CONSOLE'])
+   env.Append(LIBS = ['SDL', 'SDLmain', 'opengl32', 'glu32'])
+
+elif sys.platform.startswith('cygwin'):
+   try:
+      import tgCygBuild
+   except ImportError:
+      print 'Cygwin is not officially supported'
+
+   tgCygBuild.tgCygBuild()
+
+else:
+   # Linux or MacOSX
+
+   # determine linker flags for SDL
+   if sys.platform.startswith('linux'):
+      env.ParseConfig('sdl-config --cflags')
+      env.ParseConfig('sdl-config --libs')
+      # OSX includes equivalents of these in sdl-config, but Linux does not
+      env.Append(LIBS = ['GLU', 'GL', 'm'])
+   elif sys.platform.startswith('darwin'):
+      env.Append(CPPPATH = ['/Library/Frameworks/SDL.framework/Headers'])
+      # TODO: get sdl-config to work properly
+      # env.Append(LIBPATH = ['/usr/local/lib']) # for version built from src
+      env.Append(LINKFLAGS = ['-framework', 'SDL', '-framework' ,'Cocoa' ,'-framework', 'OpenGL'])
+
+   # add additional compiler flags
+   env.Append(CCFLAGS = ['-DDEBUG', '-g', '-Wall'])
+
+# Remove files with a main since these get added in later
+# TODO: automatically search for files with a main
+SOURCES.remove('tagGame.cpp')
+SOURCES.remove('collisionTest.cpp')
+SOURCES.remove('mathTest.cpp')
+
+# build targets
+if sys.platform.startswith('darwin'):
+   env.Program(['tagGame.cpp', 'SDLMain.m'] + SOURCES)
+   env.Program(['collisionTest.cpp', 'SDLMain.m'] + SOURCES)
+else:
+   env.Program(['tagGame.cpp'] + SOURCES)
+   env.Program(['collisionTest.cpp'] + SOURCES)
+
+env.Program(['mathTest.cpp'] + SOURCES)
+
